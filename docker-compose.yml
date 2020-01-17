@@ -1,13 +1,10 @@
 mantisbt:
-  image: xlrl/mantisbt:latest
+  image: littlebookboy/mantisbt:latest
   ports:
-    - "8989:80"
+    - "80:80"
   links:
     - mysql
   restart: always
-  volumes:
-    - ./config:/var/www/html/config
-    - ./custom:/var/www/html/custom
 
 mysql:
   image: mariadb:latest
@@ -19,10 +16,3 @@ mysql:
   restart: always
   volumes:
     - ./mysql:/var/lib/mysql
-
-postgres:
-  image: postgres:latest
-  environment:
-    - POSTGRES_USER=root
-    - POSTGRES_PASSWORD=root
-  restart: always
