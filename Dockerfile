@@ -18,7 +18,8 @@ ENV MANTIS_VER 2.23.0
 ENV MANTIS_SHA1 287179645e87b1ea603649e9e1fa17ca20f380d4
 ENV MANTIS_URL http://jaist.dl.sourceforge.net/project/mantisbt/mantis-stable/${MANTIS_VER}/mantisbt-${MANTIS_VER}.tar.gz
 ENV MANTIS_FILE mantisbt.tar.gz
-ENV MANTIS_TIMEZONE Europe/Berlin
+ENV MANTIS_TIMEZONE Asia/Taipei
+ENV LANG C.UTF-8
 
 RUN set -xe \
     && curl -fSL ${MANTIS_URL} -o ${MANTIS_FILE} \
